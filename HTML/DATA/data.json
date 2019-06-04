@@ -1,0 +1,62 @@
+   {
+       "Today": {
+           "bet": "0.00",
+           "win": "0.00",
+           "jackpotWin": "0.00",
+           "totalWin": "0.00",
+           "ggr": "0.00",
+           "payout": "0.00",
+           "rounds": "0",
+           "largestSingleWin": "0.00",
+           "uniqueLogins": "0",
+           "newPlayers": "0"
+       },
+       "Yesterday": {
+           "bet": "0.00",
+           "win": "0.00",
+           "jackpotWin": "0.00",
+           "totalWin": "0.00",
+           "ggr": "0.00",
+           "payout": "0.00",
+           "rounds": "0",
+           "largestSingleWin": "0.00",
+           "uniqueLogins": "1",
+           "newPlayers": "0"
+       },
+       "MTD": {
+           "bet": "197,333,900.00",
+           "win": "196,597,800.00",
+           "jackpotWin": "0.00",
+           "totalWin": "196,597,800.00",
+           "ggr": "736,100.00",
+           "payout": "1.00",
+           "rounds": "12,660",
+           "largestSingleWin": "3,000,000.00",
+           "uniqueLogins": "236",
+           "newPlayers": "11"
+       },
+       "SPLM": {
+           "bet": "2,791,600.00",
+           "win": "3,292,900.00",
+           "jackpotWin": "0.00",
+           "totalWin": "3,292,900.00",
+           "ggr": "-501,300.00",
+           "payout": "1.18",
+           "rounds": "336",
+           "largestSingleWin": "410,000.00",
+           "uniqueLogins": "66",
+           "newPlayers": "7"
+       },
+       "Change": {
+           "bet": "7,068.85",
+           "win": "5,970.35",
+           "jackpotWin": "0.00",
+           "totalWin": "5,970.35",
+           "ggr": "-146.84",
+           "payout": "84.75",
+           "rounds": "3,767.86",
+           "largestSingleWin": "731.71",
+           "uniqueLogins": "357.58",
+           "newPlayers": "157.14"
+       }
+   }
