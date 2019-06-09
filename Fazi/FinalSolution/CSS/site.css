@@ -9,7 +9,7 @@
 body {
     font-family: sans-serif;
     font-size: 1em;
-    color: #333;
+    color: #778899;
 }
 
 h1 {
@@ -35,10 +35,8 @@ a {
 }
 
 .s-layout__content {
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
     flex: 1;
+    padding-top: 30px;
 }
 
 
@@ -51,7 +49,7 @@ a {
     left: 0;
     width: 100%;
     height: 4em;
-    background: #192b3c;
+    background: #506578;
 }
 
 .s-sidebar__trigger>i {
@@ -70,6 +68,7 @@ a {
     height: 100%;
     background: #243e56;
     color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0 5px 8px #8AC;
 }
 
 .s-sidebar__nav:hover,
@@ -97,6 +96,7 @@ a {
     display: inline-block;
     width: 100%;
     height: 4em;
+    background-color: #4682B4
 }
 
 .s-sidebar__nav-link em {
@@ -126,10 +126,7 @@ a {
     transform: translate(-50%, -50%);
 }
 
-
-/* Mobile First */
-
-@media (min-width: 42em) {
+@media (min-width: 500px) {
     .s-layout__content {
         margin-left: 4em;
     }
@@ -147,6 +144,12 @@ a {
     .s-sidebar__trigger:focus+.s-sidebar__nav {
         width: 15em;
     }
+    .logo-img {
+        width: 19%;
+        padding-top: 10px;
+        padding-left: 20px;
+        content: url("../HTML/Pages/Dashboard/logo2.png");
+    }
 }
 
 @media (min-width: 68em) {
@@ -162,6 +165,11 @@ a {
     }
     .s-sidebar__nav ul {
         top: 1.3em;
+    }
+    .logo-img {
+        padding-left: 20px;
+        width: 80%;
+        content: url("../HTML/Pages/Dashboard/logo.png");
     }
 }
 
@@ -191,7 +199,7 @@ body {
     padding: 40px;
     font: 14px/1.5 'Open Sans', sans-serif;
     color: #345;
-    background: #f0f2f4;
+    background: #778899;
 }
 
 p:not(:last-child) {
@@ -199,15 +207,12 @@ p:not(:last-child) {
 }
 
 main {
-    padding: 40px;
-    border: 1px solid rgba(0, 0, 0, .2);
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    background: #778899;
 }
 
 section {
     display: none;
-    padding: 20px 0 0;
+    padding: 21px 0 0;
     border-top: 1px solid #abc;
 }
 
@@ -218,7 +223,7 @@ input {
 label {
     display: inline-block;
     margin: 0 0 -1px;
-    padding: 15px 25px;
+    padding: 10px 25px;
     font-weight: 600;
     text-align: center;
     color: #abc;
@@ -232,15 +237,18 @@ label:before {
 }
 
 label:hover {
-    color: #789;
+    color: white;
     cursor: pointer;
 }
 
 input:checked+label {
-    color: #0af;
+    color: #FFD700;
     border: 1px solid #abc;
-    border-bottom: 2px solid #0af;
-    border-top: 1px solid #fff;
+    border-bottom: 2px solid #FFD700;
+    border-spacing: 1px;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 }
 
 #tab1:checked~#content1,
@@ -250,7 +258,7 @@ input:checked+label {
     display: block;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     label {
         font-size: 10;
     }
@@ -260,7 +268,7 @@ input:checked+label {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
     label {
         padding: 15px;
     }
@@ -272,14 +280,36 @@ input:checked+label {
 
 /* Table  */
 
+thead {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+}
+
+th {
+    background-color: #FFD700;
+    border-color: transparent;
+    text-align: left!important;
+    color: white;
+    overflow: overlay;
+}
+
+tr>td {
+    overflow: overlay;
+    background-color: #506578;
+    color: white;
+    border-color: transparent;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     line-height: 1.25;
+    background-color: #778899;
 }
 
 table {
-    border: 1px solid #ccc;
-    border-collapse: collapse;
+    border: 1px solid transparent;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -312,6 +342,7 @@ table th {
 @media screen and (max-width: 600px) {
     table {
         border: 0;
+        padding-top: 1600px;
     }
     table caption {
         font-size: 1.3em;
@@ -338,10 +369,6 @@ table th {
         text-align: right;
     }
     table td::before {
-        /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
         content: attr(data-label);
         float: left;
         font-weight: bold;
@@ -367,10 +394,11 @@ table th {
     padding: 3.7px;
     margin-left: 10px;
     width: 10%;
+    padding-bottom: 1px;
 }
 
 .border {
-    border: 0.5px gray solid;
+    border: 0.5px white solid;
     display: inline;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -379,7 +407,6 @@ table th {
 .slider {
     -webkit-appearance: none;
     display: inline !important;
-    /* width: 60%; */
     height: 5px;
     background: #00008B;
     outline: none;
@@ -415,32 +442,39 @@ table th {
 /* DropdownSearch */
 
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #FFD700;
     color: white;
-    padding: 16px;
+    padding: 0px 0px 0px 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
 }
 
-.dropbtn:hover,
-.dropbtn:focus {
-    background-color: #3e8e41;
+.arrow-down {
+    padding: 5px 5px 5px 8px;
+    display: inline-flex;
+    background-color: gray;
 }
 
-#myInput {
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #FFE4C4;
+}
+
+.sliderInput {
     display: block!important;
-    background-image: url('searchicon.png');
     background-position: 14px 12px;
     background-repeat: no-repeat;
     font-size: 16px;
-    padding: 14px 20px 12px 45px;
+    padding: 14px 20px 12px 10px;
     border: none;
-    border-bottom: 1px solid #ddd;
+    color: white;
+    background-color: #243e56;
+    border-bottom: 1px solid #243e56;
 }
 
-#myInput:focus {
-    outline: 3px solid #ddd;
+.sliderInput:focus {
+    outline: 3px solid #243e56;
 }
 
 .dropdown {
@@ -451,27 +485,120 @@ table th {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f6f6f6;
+    background-color: #243e56;
     min-width: 230px;
     overflow: auto;
-    border: 1px solid #ddd;
+    border: 1px solid #243e56;
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    color: white;
+    padding-left: 10px;
+    padding-top: 15px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown a:hover {
-    background-color: #ddd;
+    background-color: #778899;
 }
 
 .show {
     display: block;
 }
 
+.container {
+    display: inline-flex;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 
 /* endregion DropdownSearch */
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+.pr-20 {
+    padding-right: 20px;
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.color-white {
+    color: white!important;
+}

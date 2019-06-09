@@ -32,15 +32,46 @@ export class Table {
                 let cell;
                 if (cellIndex === 0) {
                     cell = document.createElement('td');
+                    cell.setAttribute('scope', 'row');
+                    cell.setAttribute('style', 'text-align:left')
                     cell.innerHTML = this.rowData[i];
                 } else {
                     cell = document.createElement('td');
                     if (this.cellClick) {
                         cell.name = j + i;
+                        cell.setAttribute('data-label', this.rowData[i]);
+                        cell.setAttribute('style', 'text-align:right')
                         cell.onclick = (ev) => this.cellClick(cell.name);
                     }
-                    cell.innerHTML = array[j + i];
-                    j += 10;
+                    if (cell.name > (array.length - this.rowData.length - 1)) {
+                        cell.innerHTML = array[j + i];
+
+                        if (+array[j + i] < 0) {
+                            var icon = document.createElement('i');
+                            icon.classList.add('fa');
+                            icon.classList.add('fa-arrow-down');
+                            icon.classList.add('pl-15');
+                            cell.appendChild(icon);
+                        } else if (+array[j + i] > 0) {
+                            var icon = document.createElement('i');
+                            icon.classList.add('fa');
+                            icon.classList.add('fa-arrow-up');
+                            icon.classList.add('pl-15');
+                            cell.appendChild(icon);
+                        } else {
+                            var icon = document.createElement('i');
+                            icon.classList.add('fa');
+                            icon.classList.add('fa-minus');
+                            icon.classList.add('pl-15');
+                            icon.classList.add('text-error');
+                            cell.appendChild(icon);
+                        }
+
+                    } else {
+
+                        cell.innerHTML = array[j + i];
+                    }
+                    j += this.rowData.length;
                 }
                 if (this.rowClick) {
                     // tr.setAttribute('onclick', this.rowClick + '(' + i + ')');
@@ -57,12 +88,4 @@ export class Table {
 
     }
 
-}
-
-function test(index) {
-    alert(index)
-}
-
-function testCell(index) {
-    alert(index)
 }

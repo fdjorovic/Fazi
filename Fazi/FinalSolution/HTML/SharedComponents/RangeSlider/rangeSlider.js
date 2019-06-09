@@ -61,8 +61,12 @@ class RangeSlider extends HTMLElement {
         var parentDiv = document.getElementById(parentId);
         parentDiv.appendChild(container);
     }
+
 }
 customElements.define('range-slider', RangeSlider);
+
+
+
 
 function showValue(id) {
     var slider = id[1];

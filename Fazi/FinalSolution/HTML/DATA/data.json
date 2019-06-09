@@ -48,13 +48,13 @@
            "newPlayers": "7"
        },
        "Change": {
-           "bet": "7,068.85",
-           "win": "5,970.35",
+           "bet": "7068.85",
+           "win": "5970.35",
            "jackpotWin": "0.00",
-           "totalWin": "5,970.35",
+           "totalWin": "5970.35",
            "ggr": "-146.84",
            "payout": "84.75",
-           "rounds": "3,767.86",
+           "rounds": "3767.86",
            "largestSingleWin": "731.71",
            "uniqueLogins": "357.58",
            "newPlayers": "157.14"
